@@ -14,39 +14,42 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md py-3" style="border-bottom: 3px solid orangered;">
+    <nav class="navbar navbar-light navbar-expand-md py-3" style="border-bottom: 3px solid orangered;margin-bottom: 20px;">
         <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span>Žákovský senát - ZŠ Benešova</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2" style="margin-left: -6px;padding-left: 5px;margin-right: -5px;padding-right: 5px;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-2">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Aktuality</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">O nás</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Přihlásit se</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Aktuality</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">O nás</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Přihlásit se</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container py-4 py-xl-5">
+    <div class="row mb-5" style="margin-bottom: 0px!important;">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>Aktuality</h2>
+            <p class="w-lg-50">Co se děje nového ve školním senátu.</p>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5" style="padding-top: 1rem!important;padding-bottom: 1rem!important;">
         <div class="p-4">
-            <div class="row mb-5">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2>Aktuality</h2>
-                    <p class="w-lg-50">Co se děje nového ve školním senátu.</p>
-                </div>
-            </div>
             <div class="container py-4 py-xl-5">
-                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+                <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3" id="rowAktualne">
                     <div class="col" style="padding-bottom: 0!important;">
                         <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
-                            <div class="card-body p-4" style="height: 294px;">
+                            <div class="card-body p-4" style="height: 294px;text-align: center;">
                                 <p class="text-primary card-text mb-0">26. 10. 2022</p>
-                                <h4 class="card-title">Vánoční dílničky se blíží</h4>
-                                <p class="card-text">Tradiční vánoční dílničky proběhnou letos před Vánoci. No jo, zase Vánoce. Přijďte si za pouhých 10 korun něco vyrobit!</p>
-                                <div class="d-flex">
-                                    <div>
-                                        <p class="fw-bold mb-0">Kateřina Dvořáková</p>
-                                        <p class="text-muted mb-0">Učitelka</p>
-                                    </div>
-                                </div>
+                                <h4 class="card-title">Vyhlašujeme soutěže na školní halloween!</h4>
+                                <p class="card-text">Halloween proběhne v <strong>pondělí 31.10.</strong>&nbsp;a každý se může zasloužit o to, aby stál za to!<br></p><a href="souteze-halloween.html"><button class="btn btn-primary" type="button">Číst více</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col" style="padding-bottom: 0!important;">
+                        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png">
+                            <div class="card-body p-4" style="height: 294px;text-align: center;">
+                                <p class="text-primary card-text mb-0">26. 10. 2022</p>
+                                <h4 class="card-title">CELOROČNÍ HRA „NEMŮŽEŠ? PŘIDEJ!“</h4>
+                                <p class="card-text">Hra spočívá v&nbsp;plnění výzev. Cílem je překonat sám sebe a udělat přitom i něco dobrého pro druhé...<br></p><a href="souteze-halloween.html"><button class="btn btn-primary" type="button">Číst více</button></a>
                             </div>
                         </div>
                     </div>
@@ -55,7 +58,7 @@
                             <div class="card-body p-4" style="height: 294px;">
                                 <p class="text-primary card-text mb-0">26. 10. 2022</p>
                                 <h4 class="card-title">Nový web vytvořen</h4>
-                                <p class="card-text">Kvůli neschopnosti vedení "nejmenované" školy, jsme byli nuceni vytvořit tento web školního parlamentu.</p>
+                                <p class="card-text">Vítejte na nových stránkách žákovského parlamentu ZŠ Benešova Třebíč. Jsme rádi, že jsme rádi.</p><button class="btn btn-primary" type="button" onclick="download()">Vytvoř kartu</button>
                                 <div class="d-flex">
                                     <div>
                                         <p class="fw-bold mb-0">Dominik Dvořák</p>
@@ -74,8 +77,10 @@
             <p class="text-muted my-2">Kontakt: senat-zsbenesova@centrum.cz</p>
         </div>
     </footer>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="assets/js/log.js"></script>
     <script src="assets/js/Simple-Slider.js"></script>
 </body>
 
